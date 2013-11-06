@@ -17,6 +17,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Elao\Bundle\FormBundle\ElaoFormBundle(),
+            new Elao\Bundle\ThemeBundle\ElaoThemeBundle(),
             new Acme\Bundle\TestBundle\AcmeTestBundle(),
         );
 
