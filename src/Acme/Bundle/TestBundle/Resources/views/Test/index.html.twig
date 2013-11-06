@@ -1,0 +1,55 @@
+{% extends "AcmeTestBundle::base.html.twig" %}
+
+{% block body -%}
+    <h1>Test list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Enabled</th>
+                <th>Type</th>
+                <th>Created</th>
+                <th>Num</th>
+                <th>Birthday</th>
+                <th>Alarm</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('test_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.name }}</td>
+                <td>{{ entity.description }}</td>
+                <td>{{ entity.enabled }}</td>
+                <td>{{ entity.type }}</td>
+                <td>{% if entity.created %}{{ entity.created|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.num }}</td>
+                <td>{% if entity.birthday %}{{ entity.birthday|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.alarm }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('test_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('test_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('test_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

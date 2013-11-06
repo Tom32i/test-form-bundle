@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title '' %}</title>
+        <meta name="description" content="{% block meta_description '' %}">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        {% block stylesheets %}
+            {#% stylesheets 'css/main.css' %}
+                <link rel="stylesheet" href="{{ asset_url }}" />
+            {% endstylesheets %#}
+            <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}" />
+        {% endblock stylesheets %}
+
+        {% block head_javascript %}
+            {#<script src="js/vendor/modernizr-2.6.2.min.js"></script>#}
+        {% endblock head_javascript %}
+    </head>
+    <body>
+        {% spaceless %}
+        {% block body %}
+        {% endblock body %}
+
+        {% block body_javascript %}
+            {#% javascripts
+                'lib/jquery.js'
+                'lib/bootstrap.js'
+                'js/main.js'
+            %}
+                <script src="{{ asset_url }}"></script>
+            {% endjavascripts %#}
+
+            {% block analytics %}
+            {#
+            <script>
+                var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+                (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                g.src='//www.google-analytics.com/ga.js';
+                s.parentNode.insertBefore(g,s)}(document,'script'));
+            </script>
+            #}
+            {% endblock analytics %}
+
+            {% block inline_javascript '' %}
+        {% endblock body_javascript %}
+        {% endspaceless %}
+    </body>
+</html>
