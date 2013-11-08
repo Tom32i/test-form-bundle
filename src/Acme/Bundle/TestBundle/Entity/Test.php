@@ -77,11 +77,18 @@ class Test
      */
     private $alarm;
 
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="price", type="float")
+     */
+    private $price;
+
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -97,14 +104,14 @@ class Test
     public function setName($name)
     {
         $this->name = $name;
-    
+
         return $this;
     }
 
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -120,14 +127,14 @@ class Test
     public function setDescription($description)
     {
         $this->description = $description;
-    
+
         return $this;
     }
 
     /**
      * Get description
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
@@ -143,14 +150,14 @@ class Test
     public function setEnabled($enabled)
     {
         $this->enabled = $enabled;
-    
+
         return $this;
     }
 
     /**
      * Get enabled
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getEnabled()
     {
@@ -166,14 +173,14 @@ class Test
     public function setType($type)
     {
         $this->type = $type;
-    
+
         return $this;
     }
 
     /**
      * Get type
      *
-     * @return integer 
+     * @return integer
      */
     public function getType()
     {
@@ -189,14 +196,14 @@ class Test
     public function setCreated($created)
     {
         $this->created = $created;
-    
+
         return $this;
     }
 
     /**
      * Get created
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getCreated()
     {
@@ -212,14 +219,14 @@ class Test
     public function setNum($num)
     {
         $this->num = $num;
-    
+
         return $this;
     }
 
     /**
      * Get num
      *
-     * @return integer 
+     * @return integer
      */
     public function getNum()
     {
@@ -235,14 +242,14 @@ class Test
     public function setBirthday($birthday)
     {
         $this->birthday = $birthday;
-    
+
         return $this;
     }
 
     /**
      * Get birthday
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getBirthday()
     {
@@ -258,17 +265,40 @@ class Test
     public function setAlarm($alarm)
     {
         $this->alarm = $alarm;
-    
+
         return $this;
     }
 
     /**
      * Get alarm
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getAlarm()
     {
         return $this->alarm;
+    }
+
+    /**
+     * Set price
+     *
+     * @param float $price
+     * @return Test
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+    
+        return $this;
+    }
+
+    /**
+     * Get price
+     *
+     * @return float 
+     */
+    public function getPrice()
+    {
+        return $this->price;
     }
 }

@@ -76,6 +76,8 @@ class TestController extends Controller
             'method' => 'POST',
         ));
 
+        $form->add('button', 'button', array('label' => 'Button'));
+        $form->add('reset', 'reset', array('label' => 'Reset'));
         $form->add('submit', 'submit', array('label' => 'Create'));
 
         return $form;

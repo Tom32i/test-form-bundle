@@ -23,9 +23,10 @@ class TestType extends AbstractType
             ->add('num')
             ->add('birthday')
             ->add('alarm')
+            ->add('price')
         ;
     }
-    
+
     /**
      * @param OptionsResolverInterface $resolver
      */
