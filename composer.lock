@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "7551fefbb6d1f49e3e7dfcf600e883f2",
+    "hash": "8d49b6b963e7f5ec07e763d1f10c3e25",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -710,6 +710,51 @@
                 "twitter"
             ],
             "time": "2013-11-06 10:26:44"
+        },
+        {
+            "name": "elao/theme-twitter-bootstrap-3",
+            "version": "dev-master",
+            "target-dir": "Elao/Theme/TwitterBootstrap3",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:Elao/ElaoThemeTwitterBootstrap3.git",
+                "reference": "de7ec605881fc15301079c07513092ebfda6911a"
+            },
+            "require": {
+                "elao/theme-bundle": "1.0.*@dev",
+                "php": ">=5.3.4"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Elao\\Theme\\TwitterBootstrap3": "."
+                }
+            },
+            "authors": [
+                {
+                    "name": "Elao",
+                    "homepage": "http://www.elao.com"
+                },
+                {
+                    "name": "Thomas Jarrand",
+                    "homepage": "https://github.com/Tom32i"
+                }
+            ],
+            "description": "Twitter Bootstrap 3 theme for ElaoThemeBundle",
+            "homepage": "https://github.com/Elao/ElaoThemeTwitterBoostrap3",
+            "keywords": [
+                "3",
+                "bootstrap",
+                "elao",
+                "theme",
+                "twitter"
+            ],
+            "time": "2013-11-08 15:59:48"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1610,7 +1655,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "elao/form-bundle": 20,
-        "elao/theme-bundle": 20
+        "elao/theme-bundle": 20,
+        "elao/theme-twitter-bootstrap-3": 20
     },
     "platform": {
         "php": ">=5.3.3"
