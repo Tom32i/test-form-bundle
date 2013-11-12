@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Elao\Bundle\FormBundle\ElaoFormBundle(),
             new Elao\Bundle\ThemeBundle\ElaoThemeBundle(),
+            new Elao\Theme\TwitterBootstrap3\ElaoThemeTwitterBootstrap3Bundle(),
             new Acme\Bundle\TestBundle\AcmeTestBundle(),
         );
 
