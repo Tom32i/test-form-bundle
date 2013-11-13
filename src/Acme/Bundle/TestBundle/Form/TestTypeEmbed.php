@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class TestType extends AbstractType
+class TestTypeEmbed extends AbstractType
 {
         /**
      * @param FormBuilderInterface $builder
@@ -18,15 +18,6 @@ class TestType extends AbstractType
             ->add('name')
             ->add('description')
             ->add('enabled')
-            ->add('type', 'choice', array('choices' => array('foo', 'bar', 'dur'), 'expanded' => true))
-            ->add('type2', 'choice', array('choices' => array('foo', 'bar', 'dur'), 'expanded' => true, 'multiple' => true, 'mapped' => false))
-            ->add('created')
-            ->add('num')
-            ->add('birthday')
-            ->add('alarm')
-            ->add('price')
-            ->add('test', new TestTypeEmbed, array('mapped' => false))
-
         ;
     }
 
@@ -45,6 +36,6 @@ class TestType extends AbstractType
      */
     public function getName()
     {
-        return 'acme_bundle_testbundle_test';
+        return 'acme_bundle_testbundle_test_embed';
     }
 }
