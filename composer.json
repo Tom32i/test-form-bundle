@@ -15,8 +15,8 @@
             "url":"git@github.com:Elao/ElaoThemeBundle.git",
             "type":"git"
         },
-        "elao/theme-twitterbootstrap3": {
-            "url":"git@github.com:Elao/ElaoThemeTwitterBootstrap3.git",
+        "elao/theme-twitter-bootstrap-3-bundle": {
+            "url":"git@github.com:Elao/ElaoThemeTwitterBootstrap3Bundle.git",
             "type":"git"
         }
     },
@@ -35,7 +35,7 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "elao/form-bundle": "1.0.*@dev",
         "elao/theme-bundle": "1.0.*@dev",
-        "elao/theme-twitter-bootstrap-3": "1.0.*@dev"
+        "elao/theme-twitter-bootstrap-3-bundle": "1.0.*@dev"
     },
     "scripts": {
         "post-install-cmd": [
