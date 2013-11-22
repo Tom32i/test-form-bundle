@@ -65,3 +65,6 @@ swiftmailer:
     password:  %mailer_password%
     spool:     { type: memory }
 
+elao_form:
+        tree:
+            auto_generate: true

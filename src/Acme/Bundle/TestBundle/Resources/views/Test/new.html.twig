@@ -29,3 +29,14 @@
     </ul>
 </div>
 {% endblock %}
+
+{% block inline_javascript %}
+    {{ parent() }}
+    <script>
+        $('[data-collection]').each(function (key, element) {
+            new Collection(element);
+            $(element).on("collection:added", function (e, item) { console.log(e, item); });
+            $(element).on("collection:deleted", function (e, item) { console.log(e, item); });
+        });
+    </script>
+{% endblock %}

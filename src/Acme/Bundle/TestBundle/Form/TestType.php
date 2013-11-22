@@ -26,7 +26,18 @@ class TestType extends AbstractType
             ->add('alarm')
             ->add('price')
             ->add('test', new TestTypeEmbed, array('mapped' => false))
-
+            ->add(
+                'tests',
+                'collection',
+                array(
+                    'type'         => new TestTypeEmbed,
+                    'mapped'       => false,
+                    'allow_add'    => true,
+                    'allow_delete' => true,
+                    'label_add'    => true,
+                    'label_delete' => true,
+                )
+            )
         ;
     }
 
