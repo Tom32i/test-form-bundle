@@ -66,5 +66,5 @@ swiftmailer:
     spool:     { type: memory }
 
 elao_form:
-        tree:
-            auto_generate: true
+    tree:
+        auto_generate: true

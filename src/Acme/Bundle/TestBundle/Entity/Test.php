@@ -84,6 +84,27 @@ class Test
      */
     private $price;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Test", inversedBy="test")
+     * @ORM\JoinColumn(name="test", referencedColumnName="id", nullable=true)
+     **/
+    private $parent;
+
+    /**
+     * @var Collection
+     *
+     * @ORM\OneToMany(targetEntity="Test", mappedBy="test", cascade={"all"})
+     **/
+    private $children;
+
+    /**
+     * Constructor
+     */
+    public function __construct($name = '')
+    {
+        $this->name     = $name;
+        $this->children = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
@@ -288,17 +309,73 @@ class Test
     public function setPrice($price)
     {
         $this->price = $price;
-    
+
         return $this;
     }
 
     /**
      * Get price
      *
-     * @return float 
+     * @return float
      */
     public function getPrice()
     {
         return $this->price;
+    }
+
+    /**
+     * Set parent
+     *
+     * @param \Acme\Bundle\TestBundle\Entity\Test $parent
+     * @return Test
+     */
+    public function setParent(\Acme\Bundle\TestBundle\Entity\Test $parent = null)
+    {
+        $this->parent = $parent;
+
+        return $this;
+    }
+
+    /**
+     * Get parent
+     *
+     * @return \Acme\Bundle\TestBundle\Entity\Test
+     */
+    public function getParent()
+    {
+        return $this->parent;
+    }
+
+    /**
+     * Add children
+     *
+     * @param \Acme\Bundle\TestBundle\Entity\Test $children
+     * @return Test
+     */
+    public function addChildren(\Acme\Bundle\TestBundle\Entity\Test $children)
+    {
+        $this->children[] = $children;
+
+        return $this;
+    }
+
+    /**
+     * Remove children
+     *
+     * @param \Acme\Bundle\TestBundle\Entity\Test $children
+     */
+    public function removeChildren(\Acme\Bundle\TestBundle\Entity\Test $children)
+    {
+        $this->children->removeElement($children);
+    }
+
+    /**
+     * Get children
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getChildren()
+    {
+        return $this->children;
     }
 }

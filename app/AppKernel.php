@@ -16,9 +16,13 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+
+            # Elao Bundles
             new Elao\Bundle\FormBundle\ElaoFormBundle(),
             new Elao\Bundle\ThemeBundle\ElaoThemeBundle(),
-            new Elao\ThemeBundle\TwitterBootstrap3Bundle\ElaoThemeTwitterBootstrap3Bundle(),
+            new Elao\Bundle\Theme\TwitterBootstrap3Bundle\ElaoThemeTwitterBootstrap3Bundle(),
+
+            # Acme Test
             new Acme\Bundle\TestBundle\AcmeTestBundle(),
         );
 

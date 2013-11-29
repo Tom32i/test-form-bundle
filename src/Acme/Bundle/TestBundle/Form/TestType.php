@@ -15,8 +15,8 @@ class TestType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('description')
+            ->add('name', null, array('label' => 'common.name', 'help' => true))
+            ->add('description', null, array('help' => true))
             ->add('enabled')
             ->add('type', 'choice', array('choices' => array('foo', 'bar', 'dur'), 'expanded' => true))
             ->add('type2', 'choice', array('choices' => array('foo', 'bar', 'dur'), 'expanded' => true, 'multiple' => true, 'mapped' => false))
@@ -25,17 +25,14 @@ class TestType extends AbstractType
             ->add('birthday')
             ->add('alarm')
             ->add('price')
-            ->add('test', new TestTypeEmbed, array('mapped' => false))
+            ->add('parent', new TestTypeEmbed)
             ->add(
-                'tests',
+                'children',
                 'collection',
                 array(
                     'type'         => new TestTypeEmbed,
-                    'mapped'       => false,
                     'allow_add'    => true,
                     'allow_delete' => true,
-                    'label_add'    => true,
-                    'label_delete' => true,
                 )
             )
         ;
@@ -56,6 +53,6 @@ class TestType extends AbstractType
      */
     public function getName()
     {
-        return 'acme_bundle_testbundle_test';
+        return 'test';
     }
 }

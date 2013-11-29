@@ -1,23 +1,9 @@
 {% extends "AcmeTestBundle::base.html.twig" %}
 
-{% form_theme form 'ElaoThemeTwitterBootstrap3Bundle:Form:form_horizontal_layout.html.twig' %}
+{#% form_theme form 'ElaoThemeTwitterBootstrap3Bundle:Form:form_horizontal_layout.html.twig' %#}
 
 {% block body -%}
 <div class="container">
-    <h1>Test creation</h1>
-
-    <p title="Test de tooltip 1" {{ tooltip({animation: false}) }}>
-        Test de tooltip 1
-    </p>
-
-    <p title="Test de tooltip 2" {{ tooltip({placement: 'bottom'}) }}>
-        Test de tooltip 2
-    </p>
-
-    <p title="Test de popover" {{ popover({content: include('AcmeTestBundle:Test:test.html.twig'), trigger: 'hover', placement: 'bottom', html: true}) }}>
-        Test de popover
-    </p>
-
     {{ form(form) }}
 
     <ul class="record_actions">
@@ -35,7 +21,7 @@
     <script>
         $('[data-collection]').each(function (key, element) {
             new Collection(element);
-            $(element).on("collection:added", function (e, item) { console.log(e, item); });
+            $(element).on("collection:added", function (e, item) { item.find('label').innerHTML += " 1"; });
             $(element).on("collection:deleted", function (e, item) { console.log(e, item); });
         });
     </script>

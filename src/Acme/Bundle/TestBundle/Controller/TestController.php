@@ -44,7 +44,11 @@ class TestController extends Controller
      */
     public function createAction(Request $request)
     {
-        $entity = new Test();
+        $entity = new Test('test');
+
+        $entity->setParent(new Test('parent'));
+        $entity->addChildren(new Test('child'));
+
         $form = $this->createCreateForm($entity);
         $form->handleRequest($request);
 
@@ -76,9 +80,9 @@ class TestController extends Controller
             'method' => 'POST',
         ));
 
-        $form->add('button', 'button', array('label' => 'Button'));
-        $form->add('reset', 'reset', array('label' => 'Reset'));
-        $form->add('submit', 'submit', array('label' => 'Create'));
+        $form->add('button', 'button');
+        $form->add('reset', 'reset');
+        $form->add('submit', 'submit');
 
         return $form;
     }
@@ -92,8 +96,12 @@ class TestController extends Controller
      */
     public function newAction()
     {
-        $entity = new Test();
-        $form   = $this->createCreateForm($entity);
+        $entity = new Test('test');
+
+        $entity->setParent(new Test('parent'));
+        $entity->addChildren(new Test('child'));
+
+        $form = $this->createCreateForm($entity);
 
         return array(
             'entity' => $entity,

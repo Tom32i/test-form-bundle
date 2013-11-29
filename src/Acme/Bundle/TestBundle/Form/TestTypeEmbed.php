@@ -15,7 +15,7 @@ class TestTypeEmbed extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
+            ->add('name', null, array('help' => true))
             ->add('description')
             ->add('enabled')
         ;
@@ -36,6 +36,6 @@ class TestTypeEmbed extends AbstractType
      */
     public function getName()
     {
-        return 'acme_bundle_testbundle_test_embed';
+        return 'test_embed';
     }
 }
