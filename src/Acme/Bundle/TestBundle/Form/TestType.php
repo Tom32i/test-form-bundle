@@ -22,8 +22,18 @@ class TestType extends AbstractType
                 'type',
                 'choice',
                 array(
-                    'choices' => array('foo', 'bar', 'dur'),
-                    'expanded' => false
+                    'choices'  => array('foo', 'bar', 'dur'),
+                    'expanded' => true
+                )
+            )
+            ->add(
+                'type3',
+                'choice',
+                array(
+                    'choices'  => array(1 => 'foo', 2 => 'bar', 3 => 'dur'),
+                    'expanded' => false,
+                    'multiple' => true,
+                    'mapped'   => false,
                 )
             )
             ->add('type2', 'choice', array('choices' => array('foo', 'bar', 'dur'), 'expanded' => true, 'multiple' => true, 'mapped' => false))
@@ -52,7 +62,12 @@ class TestType extends AbstractType
     {
         $resolver->setDefaults(array(
             'data_class'   => 'Acme\Bundle\TestBundle\Entity\Test',
-            'other_choice' => ['trigger' => 'type', 'target' => 'created', 'value' => 2],
+            'other_choice' => [
+                ['trigger' => 'type', 'target' => 'created', 'value' => 1],
+                ['trigger' => 'type3', 'target' => 'num', 'value' => 3],
+                ['trigger' => 'type2', 'target' => 'birthday', 'value' => 2],
+                ['trigger' => 'enabled', 'target' => 'alarm', 'value' => true],
+            ],
         ));
     }
 

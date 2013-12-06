@@ -622,7 +622,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:Elao/ElaoFormBundle.git",
-                "reference": "737044e11152975fa000b06660faeb7930d3cb3b"
+                "reference": "4ba26cec41e58cc2f699f16f21df2f4e40d66180"
             },
             "require": {
                 "php": ">=5.3.4",
@@ -661,7 +661,7 @@
                 "form",
                 "twitter"
             ],
-            "time": "2013-11-13 07:16:15"
+            "time": "2013-12-06 15:58:44"
         },
         {
             "name": "elao/theme-bundle",
@@ -670,7 +670,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:Elao/ElaoThemeBundle.git",
-                "reference": "2ef28a7b80d4d73ff5b38c7d0ff3b875e3145be8"
+                "reference": "282e1fddcb6d4b5c59fbf3f3c3bc5768b2675b20"
             },
             "require": {
                 "php": ">=5.3.4",
@@ -707,7 +707,7 @@
                 "elao",
                 "theme"
             ],
-            "time": "2013-11-12 21:52:42"
+            "time": "2013-11-24 14:02:21"
         },
         {
             "name": "elao/theme-twitter-bootstrap-3-bundle",
@@ -716,7 +716,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:Elao/ElaoThemeTwitterBootstrap3Bundle.git",
-                "reference": "8cdf586da458f0b0a9ed3c42ea94710d60353dc9"
+                "reference": "f45c0ecfc254dc2b97b01da82f50432302613251"
             },
             "require": {
                 "elao/theme-bundle": "1.0.*@dev",
@@ -749,7 +749,7 @@
                 "elao",
                 "theme-bundle"
             ],
-            "time": "2013-11-29 12:42:38"
+            "time": "2013-12-05 19:49:55"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1170,16 +1170,16 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.0.2",
+            "version": "v5.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "f3917ecef35a4e4d98b303eb9fee463bc983f379"
+                "reference": "32edc3b0de0fdc1b10f5c4912e8677b3f411a230"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/f3917ecef35a4e4d98b303eb9fee463bc983f379",
-                "reference": "f3917ecef35a4e4d98b303eb9fee463bc983f379",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/32edc3b0de0fdc1b10f5c4912e8677b3f411a230",
+                "reference": "32edc3b0de0fdc1b10f5c4912e8677b3f411a230",
                 "shasum": ""
             },
             "require": {
@@ -1215,7 +1215,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2013-08-30 12:35:21"
+            "time": "2013-12-03 13:33:24"
         },
         {
             "name": "symfony/assetic-bundle",
@@ -1282,21 +1282,20 @@
         },
         {
             "name": "symfony/icu",
-            "version": "v1.2.0",
+            "version": "v1.0.0",
             "target-dir": "Symfony/Component/Icu",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Icu.git",
-                "reference": "7299cd3d8d6602103d1ebff5d0a9917b7bc6de72"
+                "reference": "cac3fdfb111adbe590155f491594636d45129783"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Icu/zipball/7299cd3d8d6602103d1ebff5d0a9917b7bc6de72",
-                "reference": "7299cd3d8d6602103d1ebff5d0a9917b7bc6de72",
+                "url": "https://api.github.com/repos/symfony/Icu/zipball/cac3fdfb111adbe590155f491594636d45129783",
+                "reference": "cac3fdfb111adbe590155f491594636d45129783",
                 "shasum": ""
             },
             "require": {
-                "lib-icu": ">=4.4",
                 "php": ">=5.3.3",
                 "symfony/intl": "~2.3"
             },
@@ -1326,7 +1325,7 @@
                 "icu",
                 "intl"
             ],
-            "time": "2013-06-03 18:32:58"
+            "time": "2013-06-03 18:32:07"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -1598,16 +1597,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.14.2",
+            "version": "v1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "ca445842fcea4f844d68203ffa2d00f5e3cdea64"
+                "reference": "85e4ff98000157ff753d934b9f13659a953f5666"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/ca445842fcea4f844d68203ffa2d00f5e3cdea64",
-                "reference": "ca445842fcea4f844d68203ffa2d00f5e3cdea64",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/85e4ff98000157ff753d934b9f13659a953f5666",
+                "reference": "85e4ff98000157ff753d934b9f13659a953f5666",
                 "shasum": ""
             },
             "require": {
@@ -1616,7 +1615,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.14-dev"
+                    "dev-master": "1.15-dev"
                 }
             },
             "autoload": {
@@ -1643,7 +1642,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2013-10-30 08:20:53"
+            "time": "2013-12-06 07:47:10"
         }
     ],
     "packages-dev": [
