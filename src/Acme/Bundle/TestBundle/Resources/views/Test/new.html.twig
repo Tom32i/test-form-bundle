@@ -1,6 +1,6 @@
 {% extends "AcmeTestBundle::base.html.twig" %}
 
-{#% form_theme form 'ElaoThemeTwitterBootstrap3Bundle:Form:form_horizontal_layout.html.twig' %#}
+{% form_theme form 'ElaoThemeTwitterBootstrap3Bundle:Form:form_horizontal_layout.html.twig' %}
 
 {% block body -%}
 <div class="container">
@@ -23,6 +23,11 @@
             new Collection(element);
             $(element).on("collection:added", function (e, item) { item.find('label').innerHTML += " 1"; });
             $(element).on("collection:deleted", function (e, item) { console.log(e, item); });
+        });
+        $('[data-other-target]').each(function (key, element) {
+            new Other(element);
+            $(element).on("other:displayed", function (e, trigger, target, value) { console.log(e, trigger, target, value); });
+            $(element).on("other:hidden", function (e, trigger, target, value) { console.log(e, trigger, target, value); });
         });
     </script>
 {% endblock %}
