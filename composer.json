@@ -11,6 +11,10 @@
             "url":"git@github.com:Elao/ElaoFormBundle.git",
             "type":"git"
         },
+        "elao/form-translation-bundle": {
+            "url":"git@github.com:Elao/ElaoFormTranslationBundle.git",
+            "type":"git"
+        },
         "elao/theme-bundle": {
             "url":"git@github.com:Elao/ElaoThemeBundle.git",
             "type":"git"
@@ -33,7 +37,8 @@
         "sensio/framework-extra-bundle": "2.3.*",
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
-        "elao/form-bundle": "1.0.*@dev",
+        "elao/form-bundle": "0.1.*@dev",
+        "elao/form-translation-bundle": "0.1.*@dev",
         "elao/theme-bundle": "1.0.*@dev",
         "elao/theme-twitter-bootstrap-3-bundle": "1.0.*@dev"
     },

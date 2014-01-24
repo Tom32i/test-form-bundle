@@ -1,0 +1,46 @@
+{% extends "AcmeTestBundle::base.html.twig" %}
+
+{% block body -%}
+<div class="container">
+    {{ form_start(form, {attr: {class: 'row'}}) }}
+        <div class="col-md-6">
+            {{ form_row(form.trigger_choice) }}
+            {{ form_row(form.trigger_multiple_choice) }}
+            {{ form_row(form.trigger_expanded_choice) }}
+            {{ form_row(form.trigger_multiple_expanded_choice) }}
+        </div>
+        <div class="col-md-6">
+            {{ form_row(form.target_choice) }}
+            {{ form_row(form.target_multiple_choice) }}
+            {{ form_row(form.target_expanded_choice) }}
+            {{ form_row(form.target_multiple_expanded_choice) }}
+        </div>
+    {{ form_end(form) }}
+</div>
+{% endblock %}
+
+{% block inline_javascript %}
+    {{ parent() }}
+        <script src="{{ asset('bundles/elaoform/js/ChoiceElement.js') }}"></script>
+    <script>
+        {% for child in form %}
+            {% if loop.index < 5 %}
+            var choice = new ChoiceElement("{{ child.vars.id }}");
+            choice.on("choice-change", function (e) {
+                console.log(this.getValue());
+            });
+            choice.setValue(1);
+            {% endif %}
+        {% endfor %}
+        /*$('[data-collection]').each(function (key, element) {
+            new Collection(element);
+            $(element).on("collection:added", function (e, item) { item.find('label').innerHTML += " 1"; });
+            $(element).on("collection:deleted", function (e, item) { console.log(e, item); });
+        });
+        $('[data-other-target]').each(function (key, element) {
+            new Other(element);
+            $(element).on("other:displayed", function (e, trigger, target, value) { console.log(e, trigger, target, value); });
+            $(element).on("other:hidden", function (e, trigger, target, value) { console.log(e, trigger, target, value); });
+        });*/
+    </script>
+{% endblock %}

@@ -9,6 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Acme\Bundle\TestBundle\Entity\Test;
 use Acme\Bundle\TestBundle\Form\TestType;
+use Acme\Bundle\TestBundle\Form\TestChoiceType;
 
 /**
  * Test controller.
@@ -35,6 +36,7 @@ class TestController extends Controller
             'entities' => $entities,
         );
     }
+
     /**
      * Creates a new Test entity.
      *
@@ -102,6 +104,29 @@ class TestController extends Controller
         $entity->addChildren(new Test('child'));
 
         $form = $this->createCreateForm($entity);
+
+        return array(
+            'entity' => $entity,
+            'form'   => $form->createView(),
+        );
+    }
+
+    /**
+     * Displays a form to create a new Test entity.
+     *
+     * @Route("/choice", name="test_choice")
+     * @Template()
+     */
+    public function testChoiceAction()
+    {
+        $entity = new Test('test');
+
+        $form = $this->createForm(new TestChoiceType(), $entity, array(
+            'action' => $this->generateUrl('test_choice'),
+            'method' => 'PUT',
+        ));
+
+        $form->add('submit', 'submit', array('label' => 'Submit'));
 
         return array(
             'entity' => $entity,

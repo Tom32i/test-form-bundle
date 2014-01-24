@@ -25,6 +25,9 @@ framework:
 twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
+    form:
+        resources:
+            - "ElaoThemeTwitterBootstrap3Bundle:Form:form_default_layout.html.twig"
 
 # Assetic Configuration
 assetic:
@@ -65,6 +68,6 @@ swiftmailer:
     password:  %mailer_password%
     spool:     { type: memory }
 
-elao_form:
-    tree:
-        auto_generate: true
+# Elao Form Translation
+elao_form_translation:
+    auto_generate: true

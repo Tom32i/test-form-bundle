@@ -19,6 +19,7 @@ class AppKernel extends Kernel
 
             # Elao Bundles
             new Elao\Bundle\FormBundle\ElaoFormBundle(),
+            new Elao\Bundle\FormTranslationBundle\ElaoFormTranslationBundle(),
             new Elao\Bundle\ThemeBundle\ElaoThemeBundle(),
             new Elao\Bundle\Theme\TwitterBootstrap3Bundle\ElaoThemeTwitterBootstrap3Bundle(),
 

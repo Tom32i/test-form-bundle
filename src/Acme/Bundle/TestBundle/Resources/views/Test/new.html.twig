@@ -1,10 +1,16 @@
 {% extends "AcmeTestBundle::base.html.twig" %}
 
-{% form_theme form 'ElaoThemeTwitterBootstrap3Bundle:Form:form_horizontal_layout.html.twig' %}
+{#% form_theme form 'ElaoThemeTwitterBootstrap3Bundle:Form:form_horizontal_layout.html.twig' %#}
 
 {% block body -%}
 <div class="container">
-    {{ form(form) }}
+    {{ form_start(form) }}
+
+        {% for child in form%}
+            {{ form_row(child, {horizontal: true}) }}
+        {% endfor %}
+
+    {{ form_end(form) }}
 
     <ul class="record_actions">
         <li>

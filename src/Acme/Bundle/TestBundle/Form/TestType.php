@@ -22,8 +22,10 @@ class TestType extends AbstractType
                 'type',
                 'choice',
                 array(
-                    'choices'  => array('foo', 'bar', 'dur'),
-                    'expanded' => true
+                    'choices'     => array('foo', 'bar', 'dur'),
+                    'expanded'    => true,
+                    'required'    => false,
+                    'empty_value' => true,
                 )
             )
             ->add(
