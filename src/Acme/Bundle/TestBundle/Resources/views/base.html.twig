@@ -28,9 +28,9 @@
         {% endblock body %}
 
         {% block body_javascript %}
-            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-            <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
-            <script src="{{ asset('bundles/elaoform/js/Collection.js') }}"></script>
+            {% javascripts 'main' %}
+                <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
             <script>
                 $('[data-toggle="tooltip"]').tooltip();
                 $('[data-toggle="popover"]').popover();
