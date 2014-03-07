@@ -1,0 +1,20 @@
+{% extends "AcmeTestBundle::base.html.twig" %}
+
+{% block body -%}
+<div class="container">
+    {{ form(form) }}
+</div>
+{% endblock %}
+
+{% block inline_javascript %}
+    {{ parent() }}
+        <script src="{{ asset('bundles/elaoform/js/Collection.js') }}"></script>
+    <script>
+        $('[data-collection]').each(function (key, element) {
+            element = $(element);
+            new Collection(element);
+            element.on("collection:added", function (e, item) { console.log(item.element); });
+            element.on("collection:deleted", function (e, item) { console.log(item.element); });
+        });
+    </script>
+{% endblock %}

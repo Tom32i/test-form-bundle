@@ -17,7 +17,7 @@ class TestType extends AbstractType
         $builder
             ->add('name', null, array('label' => 'common.name', 'help' => true))
             ->add('description', null, array('help' => true))
-            ->add('enabled')
+            ->add('enabled', null, array('help' => true))
             ->add(
                 'type',
                 'choice',

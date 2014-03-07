@@ -10,6 +10,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Acme\Bundle\TestBundle\Entity\Test;
 use Acme\Bundle\TestBundle\Form\TestType;
 use Acme\Bundle\TestBundle\Form\TestChoiceType;
+use Acme\Bundle\TestBundle\Form\CollectionTestType;
 
 /**
  * Test controller.
@@ -131,6 +132,26 @@ class TestController extends Controller
         return array(
             'entity' => $entity,
             'form'   => $form->createView(),
+        );
+    }
+
+    /**
+     * Displays a form to create a new Test entity.
+     *
+     * @Route("/collection", name="test_collection")
+     * @Template()
+     */
+    public function testCollectionAction()
+    {
+        $form = $this->createForm(new CollectionTestType(), null, array(
+            'action' => $this->generateUrl('test_collection'),
+            'method' => 'PUT',
+        ));
+
+        $form->add('submit', 'submit', array('label' => 'Submit'));
+
+        return array(
+            'form' => $form->createView(),
         );
     }
 

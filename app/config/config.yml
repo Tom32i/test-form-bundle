@@ -71,3 +71,7 @@ swiftmailer:
 # Elao Form Translation
 elao_form_translation:
     auto_generate: true
+    blocks:
+        root:      false
+        children:  false
+        separator: "_"
