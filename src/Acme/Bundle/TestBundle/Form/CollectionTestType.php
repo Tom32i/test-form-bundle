@@ -26,6 +26,15 @@ class CollectionTestType extends AbstractType
                     'max'          => 3,
                 )
             )
+            ->add(
+                'pictures',
+                'collection',
+                array(
+                    'type'         => 'file',
+                    'allow_add'    => true,
+                    'allow_delete' => true,
+                )
+            )
         ;
     }
 

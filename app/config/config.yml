@@ -33,7 +33,7 @@ twig:
 assetic:
     debug:          %kernel.debug%
     use_controller: false
-    bundles:        [ ]
+    bundles:        ['AcmeTestBundle']
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -44,7 +44,6 @@ assetic:
     assets:
         main:
             inputs:
-                - '%kernel.root_dir%/../components/jquery/dist/jquery.min.js'
                 - '%kernel.root_dir%/../components/elao-form.js/dist/form.js'
             output:  js/main.js
 

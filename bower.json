@@ -1,7 +1,6 @@
 {
   "name": "test-form-bundle",
   "dependencies": {
-    "jquery": "2.*",
     "elao-form.js": "*"
   }
 }
